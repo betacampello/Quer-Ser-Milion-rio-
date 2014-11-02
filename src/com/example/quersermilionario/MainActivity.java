@@ -3,6 +3,8 @@ package com.example.quersermilionario;
 
 
 
+
+
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -39,6 +41,19 @@ public class MainActivity extends ActionBarActivity {
     public void onPlay(View v){
     	startActivity (new Intent(getApplicationContext(), Select_player.class));    	
     }
+    
+    public void onPause(View v) {
+    	MediaPlayer media = ((VarGlobal) this.getApplication()).media;
+    	// o metodo onClick é do botao pause sound que pausa a musica
+    	
+    	Button stopsound = (Button)findViewById(R.id.pause);
+    	
+    		   if (media.isPlaying()) {
+    		      media.pause();
+    		   } else {
+    			  media.start();  
+    		   }
+    	}
     
     
 

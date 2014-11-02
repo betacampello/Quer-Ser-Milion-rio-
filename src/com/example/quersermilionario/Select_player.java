@@ -1,6 +1,9 @@
 package com.example.quersermilionario;
 
+
+
 import android.support.v7.app.ActionBarActivity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +15,18 @@ public class Select_player extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_select_player);
 	}
+	
+	
+	
+	 //esta função existe no da classe pai do activity, serve para parar a activity, neste caso estou mandando parar a musica
+	  @Override
+	    protected void onPause(){
+	    	
+	    	MediaPlayer media = ((VarGlobal) this.getApplication()).media;
+	    	media.pause();
+	    	super.onPause();  
+	    	
+	    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
