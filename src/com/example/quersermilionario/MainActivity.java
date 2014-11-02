@@ -2,9 +2,6 @@ package com.example.quersermilionario;
 
 
 
-
-
-
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -17,16 +14,33 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 	
-	
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        //criei na minha VarGlobal a variavel media, assim posso usá-la durante todo o programa
+        //na seguinte linha, estou "chamando" a variavel para usar ela
         MediaPlayer media = ((VarGlobal) this.getApplication()).media;
         media.start();
     }
+    
+    
+     // o metodo onPlay chama a seguinte activity
+    public void onPlay(View v){
+    	startActivity (new Intent(getApplicationContext(), Select_player.class));    	
+    }
+    
+    //o metodo onPause serve para dar pause na musica
+    public void onPause(View v) {
+    	MediaPlayer media = ((VarGlobal) this.getApplication()).media;
+    	
+    		   if (media.isPlaying()) {
+    		      media.pause();
+    		   } else {
+    			  media.start();  
+    		   }
+    	}
 
 
     @Override
@@ -36,25 +50,6 @@ public class MainActivity extends ActionBarActivity {
         return true;
         
     }
-    
-    
-    public void onPlay(View v){
-    	startActivity (new Intent(getApplicationContext(), Select_player.class));    	
-    }
-    
-    public void onPause(View v) {
-    	MediaPlayer media = ((VarGlobal) this.getApplication()).media;
-    	// o metodo onClick é do botao pause sound que pausa a musica
-    	
-    	Button stopsound = (Button)findViewById(R.id.pause);
-    	
-    		   if (media.isPlaying()) {
-    		      media.pause();
-    		   } else {
-    			  media.start();  
-    		   }
-    	}
-    
     
 
     @Override
