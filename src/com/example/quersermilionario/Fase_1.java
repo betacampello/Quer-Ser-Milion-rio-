@@ -17,14 +17,14 @@ public class Fase_1 extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fase_1);
 		
-		//para imprimir meu objeto name na tela do android:		
+		//para imprimir meu objeto player name na tela do android:		
 		
 		TextView printName=(TextView)findViewById(R.id.printName);
 		//aqui estou passando para a variavel app o objeto Varglobal que contem todas as variaveis e objetos globais
 		VarGlobal app = ((VarGlobal) this.getApplication());
 		//aqui estou impriminto o getName do objeto que criei em Select_player player.
 		printName.setText(app.player.getName()); 
-		
+		//aqui imprimo a pontuação, passei ela como string
 		TextView printScore=(TextView)findViewById(R.id.printScore);
 		//app.getScore() é a chamada ao meu get criado em Varglobal 
 		printScore.setText(String.valueOf(app.getScore()));
