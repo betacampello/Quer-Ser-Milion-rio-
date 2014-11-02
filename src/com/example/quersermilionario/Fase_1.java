@@ -26,8 +26,8 @@ public class Fase_1 extends ActionBarActivity {
 		printName.setText(app.player.getName()); 
 		//aqui imprimo a pontuação, passei ela como string
 		TextView printScore=(TextView)findViewById(R.id.printScore);
-		//app.getScore() é a chamada ao meu get criado em Varglobal 
-		printScore.setText(String.valueOf(app.getScore()));
+		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
+		printScore.setText(String.valueOf(app.player.getScore())); 
 	}
 
 	@Override

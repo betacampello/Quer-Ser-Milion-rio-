@@ -6,13 +6,15 @@ public class Player {
 	private String types;
 	private int best_score;
 	private int last_score;
+	private int score;
 	
 	
 	public Player (String name, String type, int best_score, int last_score ){
 		this.name = name;
 		this.type = type;
 		this.best_score = best_score;
-		this.last_score = last_score;		
+		this.last_score = last_score;
+		this.score = 0;
 	
 	}
 	
@@ -20,7 +22,8 @@ public class Player {
 		this.name = name;
 		this.type = type;
 		this.best_score = 0;
-		this.last_score = 0;		
+		this.last_score = 0;
+		this.score = 0;
 	
 	}	
 	
@@ -59,6 +62,14 @@ public class Player {
 	
 	public void setLast_score (int last_score) {
 		this.last_score = last_score;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 	
 	

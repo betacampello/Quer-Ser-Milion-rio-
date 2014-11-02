@@ -5,8 +5,10 @@ import java.util.Random;
 
 public class Perguntas {
 	
-		Random aleatorio;	
+		Random aleatorio;
+		//perguntaFase é a variavel onde vou armazenar todas as perguntas de cada fase. Vou criar um objeto que no construtor vai me passar as perguntas da fase X
 		private ArrayList<String[]> perguntasFase;
+		//em perguntasEscolhidas, vou armazenar as 5 perguntas da fase X depois de fazer o radom
 		private ArrayList<String[]> perguntasEscolhidas;
 		int contador = 0;
 		private String[] pergunta;
