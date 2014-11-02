@@ -35,6 +35,14 @@
             android:name=".Fase_1"
             android:label="@string/title_activity_fase_1" >
         </activity>
+        <activity
+            android:name=".Perdeu"
+            android:label="@string/title_activity_perdeu" >
+        </activity>
+        <activity
+            android:name=".Fase_2"
+            android:label="@string/title_activity_fase_2" >
+        </activity>
     </application>
 
 </manifest>

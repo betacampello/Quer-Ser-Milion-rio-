@@ -1081,8 +1081,8 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020058;
     }
     public static final class id {
-        public static final int Pause=0x7f060044;
-        public static final int Spintypes=0x7f060047;
+        public static final int Pause=0x7f060045;
+        public static final int Spintypes=0x7f060048;
         public static final int action_bar=0x7f06001c;
         public static final int action_bar_activity_content=0x7f060015;
         public static final int action_bar_container=0x7f06001b;
@@ -1098,7 +1098,7 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
         public static final int beginning=0x7f060011;
-        public static final int button1=0x7f060048;
+        public static final int button1=0x7f060044;
         public static final int checkbox=0x7f06002d;
         public static final int collapseActionView=0x7f06000d;
         public static final int default_activity_button=0x7f060028;
@@ -1122,7 +1122,7 @@ containing a value of this type.
         public static final int never=0x7f060009;
         public static final int none=0x7f060010;
         public static final int normal=0x7f060000;
-        public static final int play=0x7f060046;
+        public static final int play=0x7f060047;
         public static final int printName=0x7f06003c;
         public static final int printScore=0x7f06003d;
         public static final int progress_circular=0x7f060018;
@@ -1133,7 +1133,7 @@ containing a value of this type.
         public static final int radio3=0x7f060042;
         public static final int radio4=0x7f060043;
         public static final int radioGroup1=0x7f06003f;
-        public static final int ranking=0x7f060045;
+        public static final int ranking=0x7f060046;
         public static final int search_badge=0x7f060032;
         public static final int search_bar=0x7f060031;
         public static final int search_button=0x7f060033;
@@ -1208,15 +1208,19 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_fase_1=0x7f030018;
-        public static final int activity_main=0x7f030019;
-        public static final int activity_select_player=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
+        public static final int activity_fase_2=0x7f030019;
+        public static final int activity_main=0x7f03001a;
+        public static final int activity_perdeu=0x7f03001b;
+        public static final int activity_select_player=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int fase_1=0x7f0d0000;
-        public static final int main=0x7f0d0001;
-        public static final int sela=0x7f0d0002;
-        public static final int select_player=0x7f0d0003;
+        public static final int fase_2=0x7f0d0001;
+        public static final int main=0x7f0d0002;
+        public static final int perdeu=0x7f0d0003;
+        public static final int sela=0x7f0d0004;
+        public static final int select_player=0x7f0d0005;
     }
     public static final class raw {
         public static final int milhao=0x7f050000;
@@ -1266,6 +1270,8 @@ containing a value of this type.
         public static final int app_name=0x7f0b000d;
         public static final int hello_world=0x7f0b000e;
         public static final int title_activity_fase_1=0x7f0b0012;
+        public static final int title_activity_fase_2=0x7f0b0014;
+        public static final int title_activity_perdeu=0x7f0b0013;
         public static final int title_activity_sela=0x7f0b0011;
         public static final int title_activity_select_player=0x7f0b0010;
     }

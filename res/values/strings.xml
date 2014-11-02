@@ -7,5 +7,7 @@
     <string name="title_activity_select_player">Select_player</string>
     <string name="title_activity_sela">Sela</string>
     <string name="title_activity_fase_1">Fase_1</string>
+    <string name="title_activity_perdeu">Perdeu</string>
+    <string name="title_activity_fase_2">Fase_2</string>
 
 </resources>

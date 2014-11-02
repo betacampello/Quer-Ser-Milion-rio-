@@ -9,12 +9,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
+
 import android.widget.RadioButton;
 
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,12 +41,15 @@ public class Fase_1 extends ActionBarActivity {
 	//declarando perguntas da clase perguntas
 	private Perguntas perguntas = null;
 	private String pergunta = null;
+	private Player player;
 	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fase_1);
+		
+		Player player = ((VarGlobal) this.getApplication()).player;
 		
 		//para imprimir meu objeto player name na tela do android:		
 		
@@ -56,7 +62,7 @@ public class Fase_1 extends ActionBarActivity {
 		TextView printScore=(TextView)findViewById(R.id.printScore);
 		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
 		printScore.setText(String.valueOf(app.player.getScore()));
-		Perguntas perguntas = readFile("test.txt");
+		perguntas = readFile("test.txt");
 		recebeResposta ();
 		
 	}
@@ -65,19 +71,23 @@ public class Fase_1 extends ActionBarActivity {
 	    	
 	    	if (contador < 5){
 	    		//no array perguntaEscolhida estou passando uma pergunta e 4 respostas, atraves do meu objeto e do metodo getPerguntaEscolhida
-		    	String[] perguntaEscolhida = perguntas.getPerguntaEscolhida(contador);
-		    	pergunta = perguntaEscolhida[0];
-		    	TextView imprimepergunta = (TextView)findViewById(R.id.imprimepergunta);
-		    	imprimepergunta.setText(pergunta); 
-		    	
-		    	RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup1);
+	    		
+	    		String[] perguntaEscolhida = perguntas.getPerguntaEscolhida(contador);
+	    		Toast.makeText(getBaseContext(), perguntaEscolhida[0], Toast.LENGTH_LONG).show();
+	    		pergunta = perguntaEscolhida[0];
+	    		TextView imprimepergunta = (TextView)findViewById(R.id.imprimepergunta);
+	    		imprimepergunta.setText(pergunta);
+	    		RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup1);
+
 		    	for (int i = 0; i < rg.getChildCount(); i++) {
 		            RadioButton rb = (RadioButton) rg.getChildAt(i);
 		            rb.setText(perguntaEscolhida[i + 1]);
-
 		        }
-		    	rg.clearCheck();
 		    	
+		    	//rg.clearCheck();
+		    
+		    	
+	    		
 		    	        
 		    	rg.setOnCheckedChangeListener(new OnCheckedChangeListener() 
 		        {
@@ -85,11 +95,14 @@ public class Fase_1 extends ActionBarActivity {
 		                
 		            	RadioButton rb = (RadioButton) group.findViewById(checkedId);
 		            	respostaEscolhida = rb.getText().toString(); 
-		            	Toast.makeText(getBaseContext(), respostaEscolhida, Toast.LENGTH_LONG).show();
+		            	//Toast.makeText(getBaseContext(), respostaEscolhida, Toast.LENGTH_LONG).show();
 		            }
-		        });
+		        }); 
 		    	
+	    	}else {
+	    		startActivity (new Intent(getApplicationContext(), Fase_2.class));
 	    	}
+	    	
 	   }
 	
 	
@@ -141,6 +154,35 @@ public class Fase_1 extends ActionBarActivity {
 	        //retorno o meu objeto perguntas que será um array com uma pergunta e 4 respostas
 	        return perguntas;
 	    }
+	    
+	    
+	    public void onClick(View v) {
+	    	
+		    boolean certo = perguntas.comprovaResposta(respostaEscolhida);
+	    	
+	    	if (certo){
+	    		 Toast.makeText(getBaseContext(), "certo", Toast.LENGTH_LONG).show();
+	    		 contador = contador +1;
+	    		 recebeResposta();
+	    		 //aqui tenho que somar a pontuação do usuario;
+	    		 //player.addScore(100); 
+	    		 
+	    	} else {
+	    		 Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
+	    		 //startActivity (new Intent(getApplicationContext(), Perdeu.class));
+	    		 //aqui ainda tenho que fazer com que esta tela morra para que o usuario nao possa clicar em voltar e recomeçar
+	    		 //tambem tenho que fazer que o programa guarde a pontuação do usuario em um txt
+	    	}
+	    }
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
