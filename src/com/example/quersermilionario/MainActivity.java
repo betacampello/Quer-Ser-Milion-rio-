@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
     
     
     public void onPlay(View v){
-    	//startActivity (new Intent(getApplicationContext(), Select_player.class));    	
+    	startActivity (new Intent(getApplicationContext(), Select_player.class));    	
     }
     
     
