@@ -236,6 +236,7 @@ int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
 int drawable background 0x7f020057
 int drawable ic_launcher 0x7f020058
+int id Pause 0x7f06003c
 int id Spintypes 0x7f06003f
 int id action_bar 0x7f06001c
 int id action_bar_activity_content 0x7f060015
@@ -275,7 +276,6 @@ int id name 0x7f060041
 int id never 0x7f060009
 int id none 0x7f060010
 int id normal 0x7f060000
-int id pause 0x7f06003c
 int id play 0x7f06003e
 int id progress_circular 0x7f060018
 int id progress_horizontal 0x7f060019

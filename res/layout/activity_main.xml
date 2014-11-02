@@ -13,7 +13,7 @@
     
 
     <Button
-        android:id="@+id/pause"
+        android:id="@+id/Pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -27,7 +27,7 @@
         android:id="@+id/ranking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/pause"
+        android:layout_above="@+id/Pause"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="71dp"
         android:text="Ranking" />

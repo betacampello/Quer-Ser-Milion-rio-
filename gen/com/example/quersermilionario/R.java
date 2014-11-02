@@ -1081,6 +1081,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020058;
     }
     public static final class id {
+        public static final int Pause=0x7f06003c;
         public static final int Spintypes=0x7f06003f;
         public static final int action_bar=0x7f06001c;
         public static final int action_bar_activity_content=0x7f060015;
@@ -1120,7 +1121,6 @@ containing a value of this type.
         public static final int never=0x7f060009;
         public static final int none=0x7f060010;
         public static final int normal=0x7f060000;
-        public static final int pause=0x7f06003c;
         public static final int play=0x7f06003e;
         public static final int progress_circular=0x7f060018;
         public static final int progress_horizontal=0x7f060019;
