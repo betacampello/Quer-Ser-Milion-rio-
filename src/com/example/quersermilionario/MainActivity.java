@@ -2,8 +2,10 @@ package com.example.quersermilionario;
 
 
 
+
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,14 +15,15 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 	
-	private Button buttonPlay;
+	
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        buttonPlay = (Button)findViewById(R.id.play);
+        MediaPlayer media = ((VarGlobal) this.getApplication()).media;
+        media.start();
     }
 
 
