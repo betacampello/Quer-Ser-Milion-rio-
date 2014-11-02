@@ -1,7 +1,6 @@
 package com.example.quersermilionario;
 
 
-
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -41,6 +40,10 @@ public class MainActivity extends ActionBarActivity {
     			  media.start();  
     		   }
     	}
+    
+    
+    
+    
 
 
     @Override
@@ -51,7 +54,6 @@ public class MainActivity extends ActionBarActivity {
         
     }
     
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
