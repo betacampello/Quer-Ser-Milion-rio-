@@ -49,7 +49,7 @@ public class Fase_1 extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fase_1);
 		
-		Player player = ((VarGlobal) this.getApplication()).player;
+		player = ((VarGlobal) this.getApplication()).player;
 		
 		//para imprimir meu objeto player name na tela do android:		
 		
@@ -165,11 +165,11 @@ public class Fase_1 extends ActionBarActivity {
 	    		 contador = contador +1;
 	    		 recebeResposta();
 	    		 //aqui tenho que somar a pontuação do usuario;
-	    		 //player.addScore(100); 
+	    		 player.addScore(100); 
 	    		 
 	    	} else {
 	    		 Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
-	    		 //startActivity (new Intent(getApplicationContext(), Perdeu.class));
+	    		 startActivity (new Intent(getApplicationContext(), Perdeu.class));
 	    		 //aqui ainda tenho que fazer com que esta tela morra para que o usuario nao possa clicar em voltar e recomeçar
 	    		 //tambem tenho que fazer que o programa guarde a pontuação do usuario em um txt
 	    	}
