@@ -165,7 +165,14 @@ public class Fase_1 extends ActionBarActivity {
 	    		 contador = contador +1;
 	    		 recebeResposta();
 	    		 //aqui tenho que somar a pontuação do usuario;
-	    		 player.addScore(100); 
+	    		 player.addScore(100);
+	    		 
+	    		 VarGlobal app = ((VarGlobal) this.getApplication());
+	    		//aqui estou impriminto o getName do objeto que criei em Select_player player.
+	    		//aqui imprimo a pontuação, passei ela como string
+	    		TextView printScore=(TextView)findViewById(R.id.printScore);
+	    		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
+	    		printScore.setText(String.valueOf(app.player.getScore()));
 	    		 
 	    	} else {
 	    		 Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
