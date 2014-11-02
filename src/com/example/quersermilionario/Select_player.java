@@ -18,7 +18,7 @@ public class Select_player extends ActionBarActivity {
 	
 	
 	
-	 //esta função existe no da classe pai do activity, serve para parar a activity, neste caso estou mandando parar a musica
+	 //esta função existe na classe pai do activity, serve para parar ações da activity atual quando se troca de activity, neste caso estou mandando parar a musica
 	  @Override
 	    protected void onPause(){
 	    	
