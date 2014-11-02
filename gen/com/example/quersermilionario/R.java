@@ -1127,11 +1127,11 @@ containing a value of this type.
         public static final int progress_circular=0x7f060018;
         public static final int progress_horizontal=0x7f060019;
         public static final int radio=0x7f06002f;
-        public static final int radio0=0x7f06003f;
         public static final int radio1=0x7f060040;
         public static final int radio2=0x7f060041;
         public static final int radio3=0x7f060042;
-        public static final int radioGroup1=0x7f06003e;
+        public static final int radio4=0x7f060043;
+        public static final int radioGroup1=0x7f06003f;
         public static final int ranking=0x7f060045;
         public static final int search_badge=0x7f060032;
         public static final int search_bar=0x7f060031;
@@ -1150,7 +1150,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f06001e;
         public static final int submit_area=0x7f060039;
         public static final int tabMode=0x7f060002;
-        public static final int textView1=0x7f060043;
+        public static final int textView1=0x7f06003e;
         public static final int title=0x7f06002b;
         public static final int top_action_bar=0x7f060020;
         public static final int up=0x7f060021;
