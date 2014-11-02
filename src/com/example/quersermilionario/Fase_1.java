@@ -1,9 +1,14 @@
 package com.example.quersermilionario;
 
+
+
+
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class Fase_1 extends ActionBarActivity {
 
@@ -11,6 +16,18 @@ public class Fase_1 extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fase_1);
+		
+		//para imprimir meu objeto name na tela do android:		
+		
+		TextView printName=(TextView)findViewById(R.id.printName);
+		//aqui estou passando para a variavel app o objeto Varglobal que contem todas as variaveis e objetos globais
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		//aqui estou impriminto o getName do objeto que criei em Select_player player.
+		printName.setText(app.player.getName()); 
+		
+		TextView printScore=(TextView)findViewById(R.id.printScore);
+		//app.getScore() é a chamada ao meu get criado em Varglobal 
+		printScore.setText(String.valueOf(app.getScore()));
 	}
 
 	@Override
