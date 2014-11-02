@@ -23,6 +23,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import android.widget.TextView;
 import android.widget.Toast;
@@ -75,6 +76,18 @@ public class Fase_1 extends ActionBarActivity {
 		            rb.setText(perguntaEscolhida[i + 1]);
 
 		        }
+		    	rg.clearCheck();
+		    	
+		    	        
+		    	rg.setOnCheckedChangeListener(new OnCheckedChangeListener() 
+		        {
+		            public void onCheckedChanged(RadioGroup group, int checkedId) {
+		                
+		            	RadioButton rb = (RadioButton) group.findViewById(checkedId);
+		            	respostaEscolhida = rb.getText().toString(); 
+		            	Toast.makeText(getBaseContext(), respostaEscolhida, Toast.LENGTH_LONG).show();
+		            }
+		        });
 		    	
 	    	}
 	   }
