@@ -2,31 +2,88 @@ package com.example.quersermilionario;
 
 
 
+
+
 import android.support.v7.app.ActionBarActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 public class Select_player extends ActionBarActivity {
+	
+	private String type;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_select_player);
+		
+		Spinner dropdown = (Spinner)findViewById(R.id.Spintypes);			
+		String [] types = new String [] {"Aluno", "Professor", "Outros"};
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, types);
+		dropdown.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, types));
+	
+		dropdown.setOnItemSelectedListener(new OnItemSelectedListener() {
+			 
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
+            {
+            	//com a próxima linha de cod, vou receber a escolha do usuário e armazenar na variavel type
+            	type = (String) adapterView.getItemAtPosition(position);
+            	
+            	//tenho que colocar essa cariavel type como global para usar durante todo o jogo
+            	
+            	
+            	
+            	// Se quiser fazer com que saia uma caixinha de dialogo, esta abaixo comentado como fazer
+               //Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
+            }
+ 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                // vacio                 
+            }
+        });
 	}
 	
 	
+	public void onClick(View v) {
+		
+		EditText name= (EditText) findViewById(R.id.name); //Estou fazendo uma referencia atraves do id
+		
+		String person  = name.getText().toString(); // Estou armazenando na variavel person o nome que se coloca no edittex
+	    //vou criar meu objeto player da classe Player com o nome da pessoa e o tipo
+		Player player = new Player (person, type);	
+		//aqui embaixo o que fiz foi mandar o player para a varglobal
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		app.player = player;
+				
+	}
 	
-	 //esta função existe na classe pai do activity, serve para parar ações da activity atual quando se troca de activity, neste caso estou mandando parar a musica
-	  @Override
-	    protected void onPause(){
-	    	
-	    	MediaPlayer media = ((VarGlobal) this.getApplication()).media;
-	    	media.pause();
-	    	super.onPause();  
-	    	
-	    }
+	
+	public void onPause(View v) {
+    	MediaPlayer media = ((VarGlobal) this.getApplication()).media;
+    	
+    		   if (media.isPlaying()) {
+    		      media.pause();
+    		   } else {
+    			  media.start();  
+    		   }
+    	}
+	
+	
+	
+	
+	
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
