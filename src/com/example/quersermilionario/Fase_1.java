@@ -9,15 +9,24 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import android.widget.RadioButton;
 
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.RadioGroup;
+
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class Fase_1 extends ActionBarActivity {
 	
@@ -47,10 +56,28 @@ public class Fase_1 extends ActionBarActivity {
 		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
 		printScore.setText(String.valueOf(app.player.getScore()));
 		Perguntas perguntas = readFile("test.txt");
-		//recebeResposta ();	
+		recebeResposta ();
+		
 	}
 	
-	
+	   public void recebeResposta (){
+	    	
+	    	if (contador < 5){
+	    		//no array perguntaEscolhida estou passando uma pergunta e 4 respostas, atraves do meu objeto e do metodo getPerguntaEscolhida
+		    	String[] perguntaEscolhida = perguntas.getPerguntaEscolhida(contador);
+		    	pergunta = perguntaEscolhida[0];
+		    	TextView imprimepergunta = (TextView)findViewById(R.id.imprimepergunta);
+		    	imprimepergunta.setText(pergunta); 
+		    	
+		    	RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup1);
+		    	for (int i = 0; i < rg.getChildCount(); i++) {
+		            RadioButton rb = (RadioButton) rg.getChildAt(i);
+		            rb.setText(perguntaEscolhida[i + 1]);
+
+		        }
+		    	
+	    	}
+	   }
 	
 	
 	 

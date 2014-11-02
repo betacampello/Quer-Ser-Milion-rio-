@@ -30,7 +30,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/imprimepergunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/printName"
@@ -45,7 +45,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/printName"
-        android:layout_below="@+id/textView1"
+        android:layout_alignRight="@+id/printScore"
+        android:layout_below="@+id/imprimepergunta"
         android:layout_marginTop="54dp" >
 
         <RadioButton
