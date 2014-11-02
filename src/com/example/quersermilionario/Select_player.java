@@ -1,10 +1,8 @@
 package com.example.quersermilionario;
 
 
-
-
-
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
@@ -55,16 +53,19 @@ public class Select_player extends ActionBarActivity {
 	}
 	
 	
+	//Ao clicar no botão ok, chamo esta função onClick que vai criar meu objeto da clase Player e armazenar em var global, também vai chamar a activit fase1
 	public void onClick(View v) {
 		
 		EditText name= (EditText) findViewById(R.id.name); //Estou fazendo uma referencia atraves do id
 		
 		String person  = name.getText().toString(); // Estou armazenando na variavel person o nome que se coloca no edittex
 	    //vou criar meu objeto player da classe Player com o nome da pessoa e o tipo
-		Player player = new Player (person, type);	
+		Player player = new Player (person,type);	
 		//aqui embaixo o que fiz foi mandar o player para a varglobal
 		VarGlobal app = ((VarGlobal) this.getApplication());
 		app.player = player;
+		//chamo a activity fase 1
+		startActivity (new Intent(getApplicationContext(), Fase_1.class));
 				
 	}
 	

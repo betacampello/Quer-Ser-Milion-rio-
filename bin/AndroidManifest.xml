@@ -31,6 +31,10 @@
             android:name=".Sela"
             android:label="@string/title_activity_sela" >
         </activity>
+        <activity
+            android:name=".Fase_1"
+            android:label="@string/title_activity_fase_1" >
+        </activity>
     </application>
 
 </manifest>

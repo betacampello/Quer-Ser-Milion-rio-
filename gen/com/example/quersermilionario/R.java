@@ -1081,7 +1081,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020058;
     }
     public static final class id {
-        public static final int Spintypes=0x7f060040;
+        public static final int Spintypes=0x7f06003f;
         public static final int action_bar=0x7f06001c;
         public static final int action_bar_activity_content=0x7f060015;
         public static final int action_bar_container=0x7f06001b;
@@ -1097,7 +1097,7 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
         public static final int beginning=0x7f060011;
-        public static final int button1=0x7f060041;
+        public static final int button1=0x7f060040;
         public static final int checkbox=0x7f06002d;
         public static final int collapseActionView=0x7f06000d;
         public static final int default_activity_button=0x7f060028;
@@ -1116,7 +1116,7 @@ containing a value of this type.
         public static final int listMode=0x7f060001;
         public static final int list_item=0x7f060029;
         public static final int middle=0x7f060012;
-        public static final int name=0x7f06003f;
+        public static final int name=0x7f060041;
         public static final int never=0x7f060009;
         public static final int none=0x7f060010;
         public static final int normal=0x7f060000;
@@ -1199,14 +1199,16 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
-        public static final int activity_main=0x7f030018;
-        public static final int activity_select_player=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
+        public static final int activity_fase_1=0x7f030018;
+        public static final int activity_main=0x7f030019;
+        public static final int activity_select_player=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class menu {
-        public static final int main=0x7f0d0000;
-        public static final int sela=0x7f0d0001;
-        public static final int select_player=0x7f0d0002;
+        public static final int fase_1=0x7f0d0000;
+        public static final int main=0x7f0d0001;
+        public static final int sela=0x7f0d0002;
+        public static final int select_player=0x7f0d0003;
     }
     public static final class raw {
         public static final int milhao=0x7f050000;
@@ -1255,6 +1257,7 @@ containing a value of this type.
         public static final int action_settings=0x7f0b000f;
         public static final int app_name=0x7f0b000d;
         public static final int hello_world=0x7f0b000e;
+        public static final int title_activity_fase_1=0x7f0b0012;
         public static final int title_activity_sela=0x7f0b0011;
         public static final int title_activity_select_player=0x7f0b0010;
     }

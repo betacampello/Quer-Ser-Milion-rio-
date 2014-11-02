@@ -9,15 +9,6 @@
     tools:context="com.example.quersermilionario.Select_player" 
     android:background="@drawable/background">
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Spintypes"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp"
-        android:ems="10" />
-
     <Spinner
         android:id="@+id/Spintypes"
         android:layout_width="wrap_content"
@@ -36,5 +27,16 @@
         android:layout_marginTop="70dp"
         android:onClick="onClick"
         android:text="Ok" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Spintypes"
+        android:layout_centerHorizontal="true"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>
