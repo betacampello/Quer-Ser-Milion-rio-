@@ -179,6 +179,7 @@ public class Fase_1 extends ActionBarActivity {
 	    		 startActivity (new Intent(getApplicationContext(), Perdeu.class));
 	    		 //aqui ainda tenho que fazer com que esta tela morra para que o usuario nao possa clicar em voltar e recomeçar
 	    		 //tambem tenho que fazer que o programa guarde a pontuação do usuario em um txt
+	    		 
 	    	}
 	    }
 	    

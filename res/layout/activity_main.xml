@@ -30,6 +30,7 @@
         android:layout_above="@+id/Pause"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="71dp"
+        android:onClick="onRanking"
         android:text="Ranking" />
 
     <Button

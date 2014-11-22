@@ -30,6 +30,11 @@ public class MainActivity extends ActionBarActivity {
     	startActivity (new Intent(getApplicationContext(), Select_player.class));    	
     }
     
+    public void onRanking(View v){
+    	startActivity (new Intent(getApplicationContext(), Ranking.class));    	
+    }
+    
+    
     //o metodo onPause serve para dar pause na musica
     public void onPause(View v) {
     	MediaPlayer media = ((VarGlobal) this.getApplication()).media;
