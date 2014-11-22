@@ -11,6 +11,7 @@ public class VarGlobal extends Application {
 	
 	public MediaPlayer media;
 	public Player player;
+	private Banco_de_dados db;
 	
 	
 	@Override
@@ -18,6 +19,13 @@ public class VarGlobal extends Application {
 			media = MediaPlayer.create(this, R.raw.milhao);
 	 }
 	
+	public Banco_de_dados getBanco_de_dados(){
+		return this.db;
+	}
+	
+	public void setBanco_de_dados (Banco_de_dados db) {
+		 this.db = db;
+	}
 	
 
 }

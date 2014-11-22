@@ -22,6 +22,13 @@ public class MainActivity extends ActionBarActivity {
         //na seguinte linha, estou "chamando" a variavel para usar ela
         MediaPlayer media = ((VarGlobal) this.getApplication()).media;
         media.start();
+        
+        //crio meu objeto banco de dados
+        Banco_de_dados db = new Banco_de_dados(this);
+        //mando meu objeto banco de dados a classe varGlobal para poder usa-lo ao longo do programa
+        VarGlobal app = ((VarGlobal) this.getApplication());
+        app.setBanco_de_dados(db);
+      
     }
     
     
@@ -31,7 +38,8 @@ public class MainActivity extends ActionBarActivity {
     }
     
     public void onRanking(View v){
-    	startActivity (new Intent(getApplicationContext(), Ranking.class));    	
+    	startActivity (new Intent(getApplicationContext(), Ranking.class)); 
+    	
     }
     
     

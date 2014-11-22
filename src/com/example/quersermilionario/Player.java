@@ -7,7 +7,7 @@ public class Player {
 	private int best_score;
 	private int last_score;
 	private int score;
-	
+		
 	
 	public Player (String name, String type, int best_score, int last_score ){
 		this.name = name;
@@ -15,6 +15,9 @@ public class Player {
 		this.best_score = best_score;
 		this.last_score = last_score;
 		this.score = 0;
+		
+		// mandando os dados para o banco de dados
+        
 	
 	}
 	
