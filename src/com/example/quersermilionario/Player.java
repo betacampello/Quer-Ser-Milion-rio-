@@ -84,8 +84,8 @@ public class Player {
 		this.score = this.score + score;
 		this.last_score= this.score;
 		
-		if (best_score < this.last_score){				
-			this.best_score = this.last_score;
+		if (best_score < this.score){				
+			this.best_score = this.score;
 	    }
 		
 		

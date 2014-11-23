@@ -111,6 +111,34 @@ public class Banco_de_dados extends SQLiteOpenHelper {
     }
     
     
+    public Player getPlayer(String nome, VarGlobal app) {
+  
+        // 1. build the query
+        String query = "SELECT  nome, tipo, best_score  FROM players WHERE nome = '" + nome + "' order by best_score desc limit 1";
+  
+        // 2. get reference to writable DB
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+  
+        // 3. go over each row, build book and add it to list
+        Player player = null;
+        if (cursor.moveToFirst()) {
+            do {
+            	
+            	player = new Player(cursor.getString(0),cursor.getString(1),cursor.getInt(2),app);
+            	 Log.d("addplayer", Integer.toString(player.getBest_score()));
+            } while (cursor.moveToNext());
+        }
+        
+        
+  
+        // return player
+        return player;
+    }
+    
+    
+    
+    
     
     //O seguinte metodo é para pegar o nome de todos os usuarios já cadastrados no meu banco de dados e passar para a classe select player para que o usuario possa selecionar o nome dele
     

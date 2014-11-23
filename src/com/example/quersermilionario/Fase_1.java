@@ -172,6 +172,9 @@ public class Fase_1 extends ActionBarActivity {
 	    		TextView printScore=(TextView)findViewById(R.id.printScore);
 	    		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
 	    		printScore.setText(String.valueOf(app.player.getScore()));
+	    		
+	    		TextView printteste=(TextView)findViewById(R.id.printteste);
+	    		printteste.setText(String.valueOf(app.player.getBest_score ())+ app.player. getType() );
 	    	 
 	    	} else {
 	    		 Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
