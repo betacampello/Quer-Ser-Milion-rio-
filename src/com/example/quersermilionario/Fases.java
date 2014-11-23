@@ -64,7 +64,7 @@ public abstract class Fases extends ActionBarActivity {
     		//no array perguntaEscolhida estou passando uma pergunta e 4 respostas, atraves do meu objeto e do metodo getPerguntaEscolhida
     		
     		String[] perguntaEscolhida = perguntas.getPerguntaEscolhida(contador);
-    		Toast.makeText(getBaseContext(), perguntaEscolhida[0], Toast.LENGTH_LONG).show();
+    		//Toast.makeText(getBaseContext(), perguntaEscolhida[0], Toast.LENGTH_LONG).show();
     		pergunta = perguntaEscolhida[0];
     		TextView imprimepergunta = (TextView)findViewById(R.id.imprimepergunta);
     		imprimepergunta.setText(pergunta);
@@ -76,10 +76,6 @@ public abstract class Fases extends ActionBarActivity {
 	        }
 	    	rg.clearCheck();
 	    	
-	    	//rg.clearCheck();
-	    
-	    	
-    		
 	    	        
 	    	rg.setOnCheckedChangeListener(new OnCheckedChangeListener() 
 	        {
@@ -158,7 +154,7 @@ public abstract class Fases extends ActionBarActivity {
 		    boolean certo = perguntas.comprovaResposta(respostaEscolhida);
 	    	
 	    	if (certo){
-	    		 Toast.makeText(getBaseContext(), "certo", Toast.LENGTH_LONG).show();
+	    		 //Toast.makeText(getBaseContext(), "certo", Toast.LENGTH_LONG).show();
 	    		 contador = contador +1;
 	    		 recebeResposta();
 	    		 //aqui tenho que somar a pontuação do usuario;
@@ -178,7 +174,7 @@ public abstract class Fases extends ActionBarActivity {
 	    		
 	    	 
 	    	} else {
-	    		 Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
+	    		 //Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
 	    		 startActivity (new Intent(getApplicationContext(), Perdeu.class));
 	    		 //aqui ainda tenho que fazer com que esta tela morra para que o usuario nao possa clicar em voltar e recomeçar
 	    		 //tambem tenho que fazer que o programa guarde a pontuação do usuario em um txt
