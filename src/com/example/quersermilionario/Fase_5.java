@@ -15,7 +15,7 @@ public class Fase_5 extends Fases {
 		valor_primeira_pergunta = 1000000;
 		score_pergunta = 100000;
 		arquivo = "test2.txt";
-		super.seguinte_fase = Perdeu.class;
+		super.seguinte_fase = Win.class;
 		
 		super.onCreate(savedInstanceState);
 		

@@ -14,5 +14,6 @@
     <string name="title_activity_fase_3">Fase_3</string>
     <string name="title_activity_fase_4">Fase_4</string>
     <string name="title_activity_fase_5">Fase_5</string>
+    <string name="title_activity_win">Win</string>
 
 </resources>

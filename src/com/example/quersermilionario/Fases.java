@@ -74,6 +74,7 @@ public abstract class Fases extends ActionBarActivity {
 	            RadioButton rb = (RadioButton) rg.getChildAt(i);
 	            rb.setText(perguntaEscolhida[i + 1]);
 	        }
+	    	rg.clearCheck();
 	    	
 	    	//rg.clearCheck();
 	    
@@ -84,9 +85,11 @@ public abstract class Fases extends ActionBarActivity {
 	        {
 	            public void onCheckedChanged(RadioGroup group, int checkedId) {
 	                
-	            	RadioButton rb = (RadioButton) group.findViewById(checkedId);
-	            	respostaEscolhida = rb.getText().toString(); 
-	            	//Toast.makeText(getBaseContext(), respostaEscolhida, Toast.LENGTH_LONG).show();
+	            	if(checkedId>0){
+		            	RadioButton rb = (RadioButton) group.findViewById(checkedId);
+		            	respostaEscolhida = rb.getText().toString(); 
+		            	//Toast.makeText(getBaseContext(), respostaEscolhida, Toast.LENGTH_LONG).show();
+	            	}
 	            }
 	        }); 
 	    	
@@ -172,8 +175,7 @@ public abstract class Fases extends ActionBarActivity {
 	    		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
 	    		printScore.setText(String.valueOf(app.player.getScore()));
 	    		
-	    		TextView printteste=(TextView)findViewById(R.id.printteste);
-	    		printteste.setText(String.valueOf(app.player.getBest_score ())+ app.player. getType() );
+	    		
 	    	 
 	    	} else {
 	    		 Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
