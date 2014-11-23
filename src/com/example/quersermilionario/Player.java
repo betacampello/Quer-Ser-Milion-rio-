@@ -19,11 +19,6 @@ public class Player {
 		this.last_score = last_score;
 		this.score = 0;
 		this.app = app;
-		
-		Banco_de_dados db = app.getBanco_de_dados();
-		// mandando os dados para o banco de dados
-		db.addPlayer(this);
-        
 	
 	}
 	
@@ -88,6 +83,11 @@ public class Player {
 		Banco_de_dados db = app.getBanco_de_dados();
 		// mandando os dados para o banco de dados
 		db.addPlayer(this);
+	}
+	
+	public String getLinhaRanking(){
+		String linhaRanking = Integer.toString(this.best_score) + " " + this.name;
+		return linhaRanking;
 	}
 	
 	

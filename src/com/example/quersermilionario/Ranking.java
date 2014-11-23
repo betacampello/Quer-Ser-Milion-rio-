@@ -1,9 +1,16 @@
 package com.example.quersermilionario;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class Ranking extends ActionBarActivity {
 
@@ -11,8 +18,12 @@ public class Ranking extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ranking);
-		
-	
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		ArrayList<String> lista = app.getBanco_de_dados().getRanking();
+		ListView listaPerguntas = (ListView) findViewById(R.id.listRanking);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, lista);
+        listaPerguntas.setAdapter(adapter);
 	}
 
 	

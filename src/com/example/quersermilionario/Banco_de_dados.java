@@ -1,5 +1,6 @@
 package com.example.quersermilionario;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -46,8 +47,7 @@ public class Banco_de_dados extends SQLiteOpenHelper {
     }
     
     public void addPlayer(Player player){
-        //for logging
-		Log.d("addPlayer", player.getName()); 
+      
 		
 		// 1. get reference to writable DB
 		SQLiteDatabase db = this.getWritableDatabase();
@@ -69,8 +69,8 @@ public class Banco_de_dados extends SQLiteOpenHelper {
 		db.close(); 
 		}
     
-    public List<Player> getRanking() {
-        List<Player> players = new LinkedList<Player>();
+    public ArrayList<String> getRanking() {
+    	ArrayList<String> players = new ArrayList<String>();
   
         // 1. build the query
         String query = "SELECT  nome, best_score  FROM players order by best_score desc limit 10 ";
@@ -86,10 +86,10 @@ public class Banco_de_dados extends SQLiteOpenHelper {
             	player = new Player();
             	player.setName(cursor.getString(0));
             	player.setBest_score(cursor.getInt(1));
-            	
+            	String playerStr = player.getLinhaRanking();
   
                 // Add player to players
-            	players.add(player);
+            	players.add(playerStr);
             } while (cursor.moveToNext());
         }
   
