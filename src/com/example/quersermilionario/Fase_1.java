@@ -51,11 +51,10 @@ public class Fase_1 extends ActionBarActivity {
 		
 		player = ((VarGlobal) this.getApplication()).player;
 		
-		//para imprimir meu objeto player name na tela do android:		
-		
-		TextView printName=(TextView)findViewById(R.id.printName);
 		//aqui estou passando para a variavel app o objeto Varglobal que contem todas as variaveis e objetos globais
 		VarGlobal app = ((VarGlobal) this.getApplication());
+		//para imprimir meu objeto player name na tela do android:
+		TextView printName=(TextView)findViewById(R.id.printName);
 		//aqui estou impriminto o getName do objeto que criei em Select_player player.
 		printName.setText(app.player.getName()); 
 		//aqui imprimo a pontuação, passei ela como string
@@ -173,7 +172,7 @@ public class Fase_1 extends ActionBarActivity {
 	    		TextView printScore=(TextView)findViewById(R.id.printScore);
 	    		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
 	    		printScore.setText(String.valueOf(app.player.getScore()));
-	    		 
+	    	 
 	    	} else {
 	    		 Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
 	    		 startActivity (new Intent(getApplicationContext(), Perdeu.class));

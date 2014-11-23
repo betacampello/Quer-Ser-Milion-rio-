@@ -18,10 +18,15 @@ public class Banco_de_dados extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     // Database Name
     private static final String DATABASE_NAME = "MilionarioDB";
+   
+    
+    
  
     public Banco_de_dados(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION); 
     }
+    
+    
 	
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -36,19 +41,22 @@ public class Banco_de_dados extends SQLiteOpenHelper {
         // create books table
         db.execSQL(CREATE_PLAYER_TABLE);
     }
+    
+    
  
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older books table if existed
-        db.execSQL("DROP TABLE IF EXISTS books");
+        db.execSQL("DROP TABLE IF EXISTS players");
  
         // create fresh books table
         this.onCreate(db);
     }
     
+    
+    
     public void addPlayer(Player player){
       
-		
 		// 1. get reference to writable DB
 		SQLiteDatabase db = this.getWritableDatabase();
 		
@@ -59,7 +67,6 @@ public class Banco_de_dados extends SQLiteOpenHelper {
 		values.put("best_score", player.getBest_score());
 		values.put("tipo", player.getType());
 		
-		
 		// 3. insert
 		db.insert("players", // table
 		        null, //nullColumnHack
@@ -67,13 +74,18 @@ public class Banco_de_dados extends SQLiteOpenHelper {
 		
 		// 4. close
 		db.close(); 
+		
 		}
+    
+    
+    
+    
     
     public ArrayList<String> getRanking() {
     	ArrayList<String> players = new ArrayList<String>();
   
         // 1. build the query
-        String query = "SELECT  nome, best_score  FROM players order by best_score desc limit 10 ";
+        String query = "SELECT  nome, best_score,last_score  FROM players order by best_score desc limit 10 ";
   
         // 2. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
@@ -86,6 +98,7 @@ public class Banco_de_dados extends SQLiteOpenHelper {
             	player = new Player();
             	player.setName(cursor.getString(0));
             	player.setBest_score(cursor.getInt(1));
+            	player.setLast_score(cursor.getInt(2));
             	String playerStr = player.getLinhaRanking();
   
                 // Add player to players
@@ -95,6 +108,29 @@ public class Banco_de_dados extends SQLiteOpenHelper {
   
         // return books
         return players;
+    }
+    
+    
+    //o seguinte metodo serve para saber se o player que está jogando já existe e, em caso positivo, pegar a melhor pontuação dele 
+    //para na classe Player ir comparando a pontuação que o player vai fazendo com a melhor pontuação dele
+    public int getBest_score_player(String player){
+    	
+    	String query = "SELECT best_score FROM players WHERE nome = player.getName ORDER BY best_score DESC LIMIT 1";
+    	SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+    	
+        //na verdade, quando chamo esta função, já sei que o jogador existe (pois o metodo da classe que chama esta função, ja fez a verificação através da variável player_exist), porém, por segurança para não dar erro, coloco a condição que não seja nulo
+        //if(cursor != null && cursor.getCount()>0){
+        	   cursor.moveToFirst();
+        	   int best_score = cursor.getInt(0);
+        	   return best_score;
+        	   
+        //} else {
+    	
+		//return 0;
+		
+        //}
+    	
     }
     
     

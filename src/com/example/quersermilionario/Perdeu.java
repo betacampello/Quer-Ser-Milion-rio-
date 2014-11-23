@@ -1,9 +1,11 @@
 package com.example.quersermilionario;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Perdeu extends ActionBarActivity {
 
@@ -21,6 +23,10 @@ public class Perdeu extends ActionBarActivity {
 		getMenuInflater().inflate(R.menu.perdeu, menu);
 		return true;
 	}
+	
+	public void onRestart(View v){
+    	startActivity (new Intent(getApplicationContext(), MainActivity.class));    	
+    }
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

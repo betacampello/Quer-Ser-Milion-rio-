@@ -9,22 +9,13 @@
     tools:context="com.example.quersermilionario.Select_player" 
     android:background="@drawable/background">
 
-    <Spinner
-        android:id="@+id/Spintypes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="182dp" />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/name"
         android:layout_alignTop="@+id/Spintypes"
-        android:layout_marginLeft="54dp"
-        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
         android:onClick="onClick"
         android:text="Ok" />
 
@@ -32,22 +23,17 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Spintypes"
+        android:layout_above="@+id/button1"
         android:layout_centerHorizontal="true"
-        android:ems="10" >
+        android:layout_marginBottom="30dp"
+        android:ems="10" />
 
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/Pause"
-        style="?android:attr/buttonStyleSmall"
+    <Spinner
+        android:id="@+id/Spintypes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Spintypes"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="45dp"
-        android:onClick="onPause"
-        android:text="Pause" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="182dp" />
 
 </RelativeLayout>

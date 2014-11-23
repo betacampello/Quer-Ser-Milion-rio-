@@ -6,9 +6,11 @@ import java.util.List;
 
 
 import android.support.v7.app.ActionBarActivity;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -27,7 +29,14 @@ public class Ranking extends ActionBarActivity {
 	}
 
 	
-	
+	public void onClean(View v) {
+		
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		Banco_de_dados db = app.getBanco_de_dados();
+		SQLiteDatabase db2 = db.getWritableDatabase();
+        db2.execSQL("delete from players");
+ 
+	}
 	
 	
 	
