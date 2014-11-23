@@ -35,15 +35,14 @@ import android.widget.AdapterView.OnItemClickListener;
 public class Fase_1 extends Fases {
 	
 	
-	 
-	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
-		
+		valor_primeira_pergunta = 100;
+		score_pergunta = 100;
 		arquivo = "test.txt";
-		super.seguinte_fase = Fase_2.class;
+		seguinte_fase = Fase_2.class;
 		
 		super.onCreate(savedInstanceState);
 		

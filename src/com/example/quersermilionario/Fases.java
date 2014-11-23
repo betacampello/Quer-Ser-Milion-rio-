@@ -32,6 +32,8 @@ public abstract class Fases extends ActionBarActivity {
 	private Player player;
 	public Class seguinte_fase;
 	public String arquivo;
+	public int score_pergunta;
+	public int valor_primeira_pergunta;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -156,7 +158,11 @@ public abstract class Fases extends ActionBarActivity {
 	    		 contador = contador +1;
 	    		 recebeResposta();
 	    		 //aqui tenho que somar a pontuação do usuario;
-	    		 player.addScore(100);
+	    		 if (contador == 1){
+	    			 player.setScore(valor_primeira_pergunta);
+	    		 }else {
+	    			 player.addScore(score_pergunta);
+	    		 }
 	    		 
 	    		 VarGlobal app = ((VarGlobal) this.getApplication());
 	    		//aqui estou impriminto o getName do objeto que criei em Select_player player.
