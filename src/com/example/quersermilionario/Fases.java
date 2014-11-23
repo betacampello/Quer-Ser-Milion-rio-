@@ -31,13 +31,27 @@ public abstract class Fases extends ActionBarActivity {
 	private String pergunta = null;
 	private Player player;
 	public Class seguinte_fase;
+	public String arquivo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_fases);
+		setContentView(R.layout.activity_fase_1);
 	
 		player = ((VarGlobal) this.getApplication()).player;
+		
+		//aqui estou passando para a variavel app o objeto Varglobal que contem todas as variaveis e objetos globais
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		//para imprimir meu objeto player name na tela do android:
+		TextView printName=(TextView)findViewById(R.id.printName);
+		//aqui estou impriminto o getName do objeto que criei em Select_player player.
+		printName.setText(app.player.getName()); 
+		//aqui imprimo a pontuação, passei ela como string
+		TextView printScore=(TextView)findViewById(R.id.printScore);
+		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
+		printScore.setText(String.valueOf(app.player.getScore()));
+		perguntas = readFile(arquivo);
+		recebeResposta ();
 	}
 	
 	
