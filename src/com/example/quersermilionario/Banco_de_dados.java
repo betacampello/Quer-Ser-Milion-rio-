@@ -60,20 +60,23 @@ public class Banco_de_dados extends SQLiteOpenHelper {
 		// 1. get reference to writable DB
 		SQLiteDatabase db = this.getWritableDatabase();
 		
-		// 2. create ContentValues to add key "column"/value
-		ContentValues values = new ContentValues();
-		values.put("nome", player.getName()); // get Name 
-		values.put("last_score", player.getLast_score()); // get LAST SCORE
-		values.put("best_score", player.getBest_score());
-		values.put("tipo", player.getType());
-		
-		// 3. insert
-		db.insert("players", // table
-		        null, //nullColumnHack
-		        values); // key/value -> keys = column names/ values = column values
-		
-		// 4. close
-		db.close(); 
+		String query = "INSERT OR REPLACE INTO players (ID, nome,tipo,last_score, best_score) VALUES ((SELECT ID FROM players WHERE nome='" + player.getName() + "'),'" + player.getName() + "', '" + player.getType() + "', " + Integer.toString(player.getLast_score()) + ", " + Integer.toString(player.getBest_score()) + ")";     
+		db.execSQL(query);
+		/*
+			// 2. create ContentValues to add key "column"/value
+			ContentValues values = new ContentValues();
+			values.put("nome", player.getName()); // get Name 
+			values.put("last_score", player.getLast_score()); // get LAST SCORE
+			values.put("best_score", player.getBest_score());
+			values.put("tipo", player.getType());
+			
+			// 3. insert
+			db.insert("players", // table
+			        null, //nullColumnHack
+			        values); // key/value -> keys = column names/ values = column values
+			*/
+			// 4. close
+			db.close(); 
 		
 		}
     
