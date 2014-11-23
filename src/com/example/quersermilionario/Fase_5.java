@@ -4,19 +4,18 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-public class Fase_2 extends Fases {
+public class Fase_5 extends Fases {
 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
-		quantidade_perguntas_fase = 5;
-		valor_primeira_pergunta = 1000;
-		score_pergunta = 1000;
+		quantidade_perguntas_fase = 1;
+		valor_primeira_pergunta = 1000000;
+		score_pergunta = 100000;
 		arquivo = "test2.txt";
-		super.seguinte_fase = Fase_3.class;
+		super.seguinte_fase = Perdeu.class;
 		
 		super.onCreate(savedInstanceState);
 		

@@ -1221,12 +1221,15 @@ containing a value of this type.
     public static final class menu {
         public static final int fase_1=0x7f0d0000;
         public static final int fase_2=0x7f0d0001;
-        public static final int fases=0x7f0d0002;
-        public static final int main=0x7f0d0003;
-        public static final int perdeu=0x7f0d0004;
-        public static final int ranking=0x7f0d0005;
-        public static final int sela=0x7f0d0006;
-        public static final int select_player=0x7f0d0007;
+        public static final int fase_3=0x7f0d0002;
+        public static final int fase_4=0x7f0d0003;
+        public static final int fase_5=0x7f0d0004;
+        public static final int fases=0x7f0d0005;
+        public static final int main=0x7f0d0006;
+        public static final int perdeu=0x7f0d0007;
+        public static final int ranking=0x7f0d0008;
+        public static final int sela=0x7f0d0009;
+        public static final int select_player=0x7f0d000a;
     }
     public static final class raw {
         public static final int milhao=0x7f050000;
@@ -1277,6 +1280,9 @@ containing a value of this type.
         public static final int hello_world=0x7f0b000e;
         public static final int title_activity_fase_1=0x7f0b0012;
         public static final int title_activity_fase_2=0x7f0b0014;
+        public static final int title_activity_fase_3=0x7f0b0017;
+        public static final int title_activity_fase_4=0x7f0b0018;
+        public static final int title_activity_fase_5=0x7f0b0019;
         public static final int title_activity_fases=0x7f0b0016;
         public static final int title_activity_perdeu=0x7f0b0013;
         public static final int title_activity_ranking=0x7f0b0015;

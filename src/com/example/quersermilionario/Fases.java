@@ -34,6 +34,7 @@ public abstract class Fases extends ActionBarActivity {
 	public String arquivo;
 	public int score_pergunta;
 	public int valor_primeira_pergunta;
+	public int quantidade_perguntas_fase;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +60,7 @@ public abstract class Fases extends ActionBarActivity {
 	
 	public void recebeResposta (){
     	
-    	if (contador < 5){
+    	if (contador < quantidade_perguntas_fase){
     		//no array perguntaEscolhida estou passando uma pergunta e 4 respostas, atraves do meu objeto e do metodo getPerguntaEscolhida
     		
     		String[] perguntaEscolhida = perguntas.getPerguntaEscolhida(contador);
