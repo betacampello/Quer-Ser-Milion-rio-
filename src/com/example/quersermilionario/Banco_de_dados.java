@@ -1,7 +1,11 @@
 package com.example.quersermilionario;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -64,6 +68,34 @@ public class Banco_de_dados extends SQLiteOpenHelper {
 		// 4. close
 		db.close(); 
 		}
+    
+    public List<Player> getRanking() {
+        List<Player> players = new LinkedList<Player>();
+  
+        // 1. build the query
+        String query = "SELECT  nome, best_score  FROM players order by best_score desc limit 10 ";
+  
+        // 2. get reference to writable DB
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+  
+        // 3. go over each row, build book and add it to list
+        Player player = null;
+        if (cursor.moveToFirst()) {
+            do {
+            	player = new Player();
+            	player.setName(cursor.getString(0));
+            	player.setBest_score(cursor.getInt(1));
+            	
+  
+                // Add player to players
+            	players.add(player);
+            } while (cursor.moveToNext());
+        }
+  
+        // return books
+        return players;
+    }
     
     
     

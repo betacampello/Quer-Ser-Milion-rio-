@@ -59,14 +59,14 @@ public class Select_player extends ActionBarActivity {
 	public void onClick(View v) {
 		
 			
-			
+		    VarGlobal app = ((VarGlobal) this.getApplication());
 			EditText name= (EditText) findViewById(R.id.name); //Estou fazendo uma referencia atraves do id
 			
 			String person  = name.getText().toString(); // Estou armazenando na variavel person o nome que se coloca no edittex
 		    //vou criar meu objeto player da classe Player com o nome da pessoa e o tipo
-			Player player = new Player (person,type);	
+			Player player = new Player (person,type, app);	
 			//aqui embaixo o que fiz foi mandar o player para a varglobal
-			VarGlobal app = ((VarGlobal) this.getApplication());
+			
 			app.player = player;
 			//chamo a activity fase 1
 			startActivity (new Intent(getApplicationContext(), Fase_1.class));
