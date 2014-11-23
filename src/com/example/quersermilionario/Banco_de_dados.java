@@ -106,9 +106,33 @@ public class Banco_de_dados extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
   
-        // return books
+        // return players
         return players;
     }
+    
+    
+    
+    //O seguinte metodo é para pegar o nome de todos os usuarios já cadastrados no meu banco de dados e passar para a classe select player para que o usuario possa selecionar o nome dele
+    
+    public ArrayList<String> getPlayers(){
+    	
+    	ArrayList<String> players = new ArrayList<String>();
+    	 String query = "SELECT  nome FROM players ORDER by nome";
+    	 
+    	 SQLiteDatabase db = this.getWritableDatabase();
+         Cursor cursor = db.rawQuery(query, null);
+         if (cursor.moveToFirst()) {
+             do {
+            	 players.add(cursor.getString(0));
+              } while (cursor.moveToNext());
+         }
+    	
+		return players;
+    	
+    }
+    
+    
+    
     
     
     //o seguinte metodo serve para saber se o player que está jogando já existe e, em caso positivo, pegar a melhor pontuação dele 

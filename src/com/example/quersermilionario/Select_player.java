@@ -52,6 +52,16 @@ public class Select_player extends ActionBarActivity {
                 // vacio                 
             }
         });
+		
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		Banco_de_dados db = app.getBanco_de_dados();
+		Spinner Select_player = (Spinner)findViewById(R.id.spinnerPlayers);
+		ArrayAdapter<String> adapterPlayer = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, db.getPlayers());
+		Select_player.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, db.getPlayers()));
+		
+		
+		
+		
 	}
 	
 	
