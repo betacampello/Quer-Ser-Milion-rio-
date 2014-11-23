@@ -10,5 +10,6 @@
     <string name="title_activity_perdeu">Perdeu</string>
     <string name="title_activity_fase_2">Fase_2</string>
     <string name="title_activity_ranking">Ranking</string>
+    <string name="title_activity_fases">Fases</string>
 
 </resources>

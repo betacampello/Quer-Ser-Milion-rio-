@@ -4,31 +4,34 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-public class Fase_2 extends ActionBarActivity {
+public class Fase_2 extends Fases {
+
+private String arquivo = "test.txt";
+	 
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_fase_2);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.fase_2, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+		setContentView(R.layout.activity_fase_1);
+		
+		super.seguinte_fase = Fase_1.class;
+		
+		//aqui estou passando para a variavel app o objeto Varglobal que contem todas as variaveis e objetos globais
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		//para imprimir meu objeto player name na tela do android:
+		TextView printName=(TextView)findViewById(R.id.printName);
+		//aqui estou impriminto o getName do objeto que criei em Select_player player.
+		printName.setText(app.player.getName()); 
+		//aqui imprimo a pontuação, passei ela como string
+		TextView printScore=(TextView)findViewById(R.id.printScore);
+		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
+		printScore.setText(String.valueOf(app.player.getScore()));
+		perguntas = readFile(arquivo);
+		recebeResposta ();
+		
+		
 	}
 }

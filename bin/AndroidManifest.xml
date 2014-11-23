@@ -47,6 +47,10 @@
             android:name=".Ranking"
             android:label="@string/title_activity_ranking" >
         </activity>
+        <activity
+            android:name=".Fases"
+            android:label="@string/title_activity_fases" >
+        </activity>
     </application>
 
 </manifest>
