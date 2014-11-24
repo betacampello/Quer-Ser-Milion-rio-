@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class Perdeu extends ActionBarActivity {
 
@@ -15,6 +16,11 @@ public class Perdeu extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_perdeu);
 		
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		String name = app.player.getName();
+		int last_score = app.player.getLast_score();
+		TextView printNameScore=(TextView)findViewById(R.id.NameScore);
+		printNameScore.setText(name + ",\nsua pontuação foi: " + String.valueOf(last_score));
 		
 	}
 	

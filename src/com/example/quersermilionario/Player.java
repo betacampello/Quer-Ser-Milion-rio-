@@ -103,7 +103,7 @@ public class Player {
 	
 	//para mostrar os dados nome e melhor pontuação, preciso passar como string, para isso fiz a função abaixo
 	public String getLinhaRanking(){
-		String linhaRanking = "Jogador: " + this.name +", Melhor pontuação: " + Integer.toString(this.best_score) + ", Última pontuação: " + Integer.toString(this.last_score);
+		String linhaRanking = "Jogador: " + this.name +"\n       Melhor pontuação: " + Integer.toString(this.best_score) + "\n       Última pontuação: " + Integer.toString(this.last_score);
 		return linhaRanking;
 	}
 	
