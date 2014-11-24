@@ -4,6 +4,7 @@ package com.example.quersermilionario;
 
 
 import android.support.v7.app.ActionBarActivity;
+import android.text.TextUtils;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Toast;
 
 public class Select_player extends ActionBarActivity {
 	
@@ -99,13 +101,18 @@ public class Select_player extends ActionBarActivity {
 			EditText name= (EditText) findViewById(R.id.name); //Estou fazendo uma referencia atraves do id
 			
 			String person  = name.getText().toString(); // Estou armazenando na variavel person o nome que se coloca no edittex
-		    //vou criar meu objeto player da classe Player com o nome da pessoa e o tipo, estou usando o construtor que só exige estes 2 parametros
-			Player player = new Player (person,type, app);	
-			//aqui embaixo o que fiz foi mandar o player para a varglobal
-			
-			app.player = player;
-			//chamo a activity fase 1
-			startActivity (new Intent(getApplicationContext(), Fase_1.class));
+		    if (!TextUtils.isEmpty(person)){
+			    
+				//vou criar meu objeto player da classe Player com o nome da pessoa e o tipo, estou usando o construtor que só exige estes 2 parametros
+				Player player = new Player (person,type, app);	
+				//aqui embaixo o que fiz foi mandar o player para a varglobal
+				
+				app.player = player;
+				//chamo a activity fase 1
+				startActivity (new Intent(getApplicationContext(), Fase_1.class));
+		    }else{
+		    	Toast.makeText(getBaseContext(), "Digite seu nome", Toast.LENGTH_LONG).show();
+		    }
 				
 	}
 	
