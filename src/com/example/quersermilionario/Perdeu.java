@@ -2,6 +2,7 @@ package com.example.quersermilionario;
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,7 +33,11 @@ public class Perdeu extends ActionBarActivity {
 	}
 	
 	public void onRestart(View v){
-		
+		MediaPlayer media = ((VarGlobal) this.getApplication()).boos;
+    	
+		   if (media.isPlaying()) {
+		      media.pause();
+		   } 
     	startActivity (new Intent(getApplicationContext(), MainActivity.class));    	
     }
 
