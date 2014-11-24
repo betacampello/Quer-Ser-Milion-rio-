@@ -16,6 +16,13 @@ public class Perdeu extends ActionBarActivity {
 		
 		
 	}
+	
+	@Override
+	public void onBackPressed(){
+		startActivity (new Intent(getApplicationContext(), MainActivity.class)); 
+	}
+	
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
