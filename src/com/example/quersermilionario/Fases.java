@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import android.support.v7.app.ActionBarActivity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
@@ -184,7 +186,23 @@ public abstract class Fases extends ActionBarActivity {
 	    
 	    
 	    
-	
+	    public void onBackPressed(){
+	    	new AlertDialog.Builder(this)
+	        .setIcon(android.R.drawable.ic_dialog_alert)
+	        .setTitle("Abandonar")
+	        .setMessage("Tem certeza que quer abandonar a partida?")
+	        .setPositiveButton("Sim", new DialogInterface.OnClickListener()
+	    {
+	        @Override
+	        public void onClick(DialogInterface dialog, int which) {
+	        	startActivity (new Intent(getApplicationContext(), MainActivity.class)); 
+	        }
+
+	    })
+	    .setNegativeButton("Não", null)
+	    .show();
+			 
+		}
 	
 	
 	
