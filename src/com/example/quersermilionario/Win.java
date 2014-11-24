@@ -1,6 +1,7 @@
 package com.example.quersermilionario;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +19,13 @@ public class Win extends ActionBarActivity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.win, menu);
 		return true;
+	}
+	
+	
+	
+	@Override
+	public void onBackPressed(){
+		startActivity (new Intent(getApplicationContext(), MainActivity.class)); 
 	}
 
 	@Override

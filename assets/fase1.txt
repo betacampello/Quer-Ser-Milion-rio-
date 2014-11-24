@@ -1,0 +1,10 @@
+﻿Qual é a principal caracteristica da linguagem java?;Linguagem de nova geraçao;Linguagem fortemente tipada;Linguagem muito dificil;Estão corretas A e C;Linguagem fortemente tipada
+Qual é o tamanho do tipo primitivo "INT"?;1 byte;2 bytes;4 bytes;8 bytes;1 byte
+Que operador usamos para indicar igualdade?;=;==;!=;A e B estão corretas;=
+Qual é o rango do tipo primitivo "Boolean"?;True / False;Entre -2^1 e 2^1;Entre -2^10 e 2^10;nenhuma das anteriores;True / False
+Qual de os seguintes tipos não é primitivo?;Int;Long;Short;String;String
+Dentro dos tipos primitivos qual não forma parte da categoria integer?;Double;Long;Short;Int;Double
+Qual é a diferença entre "print" e "println"?;Não tem diferença;println Imprime com quebra de linha;println Imprime sem quebra de linha;println Imprime 2 linhas;println Imprime com quebra de linha
+Segundos os operadores booleanos como indicamos negação de B?;!= B;!B;B!;\B;!B
+Como podemos escrever o operador booleano "OU"?;OR;&;||;A e B estão corretas;||
+O operador "<=" significa?;Maior ou igual que;Menor ou igual que;igual que;nenhuma delas;Menor ou igual que
