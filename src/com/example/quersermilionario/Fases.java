@@ -44,7 +44,7 @@ public abstract class Fases extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fase_1);
 	
-		player = ((VarGlobal) this.getApplication()).player;
+		this.player = ((VarGlobal) this.getApplication()).player;
 		
 		//aqui estou passando para a variavel app o objeto Varglobal que contem todas as variaveis e objetos globais
 		VarGlobal app = ((VarGlobal) this.getApplication());
@@ -158,12 +158,11 @@ public abstract class Fases extends ActionBarActivity {
 	    	
 	    	if (certo){
 	    		 //Toast.makeText(getBaseContext(), "certo", Toast.LENGTH_LONG).show();
-	    		 contador = contador +1;
-	    		 recebeResposta();
+	    		 contador = contador + 1;
+	    		 
 	    		 MediaPlayer media_aplausos = ((VarGlobal) this.getApplication()).aplausos;
 	    		 media_aplausos.start();
 	    		 
-	    		 //aqui tenho que somar a pontuação do usuario;
 	    		 if (contador == 1){
 	    			 player.setScore(valor_primeira_pergunta);
 	    		 }else {
@@ -176,7 +175,7 @@ public abstract class Fases extends ActionBarActivity {
 	    		TextView printScore=(TextView)findViewById(R.id.printScore);
 	    		//faço a chamada a meu objeto do score, a função String.valueOf é para passar de int a string para que possa imprimir
 	    		printScore.setText(String.valueOf(app.player.getScore()));
-	    		
+	    		recebeResposta();
 	    		
 	    	 
 	    	} else {

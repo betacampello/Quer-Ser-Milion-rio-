@@ -82,13 +82,20 @@ public class Player {
 	
 	public void setScore (int score) {
 		this.score = score;
+		this.last_score= this.score;
+		if (this.best_score < this.score){				
+			this.best_score = this.score;
+	    }
+		Banco_de_dados db = app.getBanco_de_dados();
+		// mandando os dados para o banco de dados
+		db.addPlayer(this);
 	}
 
 	public void addScore(int score) {
 		this.score = this.score + score;
 		this.last_score= this.score;
 		
-		if (best_score < this.score){				
+		if (this.best_score < this.score){				
 			this.best_score = this.score;
 	    }
 		

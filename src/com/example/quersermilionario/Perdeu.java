@@ -26,6 +26,11 @@ public class Perdeu extends ActionBarActivity {
 	
 	@Override
 	public void onBackPressed(){
+		MediaPlayer media = ((VarGlobal) this.getApplication()).boos;
+    	
+		   if (media.isPlaying()) {
+		      media.pause();
+		   }
 		startActivity (new Intent(getApplicationContext(), MainActivity.class)); 
 	}
 	
