@@ -10,6 +10,8 @@ import android.media.MediaPlayer;
 public class VarGlobal extends Application {
 	
 	public MediaPlayer media;
+	public MediaPlayer aplausos;
+	public MediaPlayer boos;
 	public Player player;
 	private Banco_de_dados db;
 	
@@ -17,6 +19,8 @@ public class VarGlobal extends Application {
 	@Override
 	public void onCreate () {
 			media = MediaPlayer.create(this, R.raw.milhao);
+			aplausos = MediaPlayer.create(this, R.raw.aplausos);
+			boos = MediaPlayer.create(this, R.raw.boos);
 	 }
 	
 	public Banco_de_dados getBanco_de_dados(){

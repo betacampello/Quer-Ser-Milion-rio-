@@ -32,6 +32,7 @@ public class Perdeu extends ActionBarActivity {
 	}
 	
 	public void onRestart(View v){
+		
     	startActivity (new Intent(getApplicationContext(), MainActivity.class));    	
     }
 

@@ -358,7 +358,9 @@ int menu ranking 0x7f0d0008
 int menu sela 0x7f0d0009
 int menu select_player 0x7f0d000a
 int menu win 0x7f0d000b
-int raw milhao 0x7f050000
+int raw aplausos 0x7f050000
+int raw boos 0x7f050001
+int raw milhao 0x7f050002
 int string abc_action_bar_home_description 0x7f0b0001
 int string abc_action_bar_up_description 0x7f0b0002
 int string abc_action_menu_overflow_description 0x7f0b0003

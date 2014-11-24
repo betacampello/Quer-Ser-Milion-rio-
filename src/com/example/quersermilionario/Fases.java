@@ -11,6 +11,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -159,6 +160,9 @@ public abstract class Fases extends ActionBarActivity {
 	    		 //Toast.makeText(getBaseContext(), "certo", Toast.LENGTH_LONG).show();
 	    		 contador = contador +1;
 	    		 recebeResposta();
+	    		 MediaPlayer media_aplausos = ((VarGlobal) this.getApplication()).aplausos;
+	    		 media_aplausos.start();
+	    		 
 	    		 //aqui tenho que somar a pontuação do usuario;
 	    		 if (contador == 1){
 	    			 player.setScore(valor_primeira_pergunta);
@@ -178,9 +182,9 @@ public abstract class Fases extends ActionBarActivity {
 	    	} else {
 	    		 //Toast.makeText(getBaseContext(), "errado", Toast.LENGTH_LONG).show();
 	    		 startActivity (new Intent(getApplicationContext(), Perdeu.class));
-	    		 //aqui ainda tenho que fazer com que esta tela morra para que o usuario nao possa clicar em voltar e recomeçar
-	    		 //tambem tenho que fazer que o programa guarde a pontuação do usuario em um txt
-	    		 
+	    		 MediaPlayer media_boos = ((VarGlobal) this.getApplication()).boos;
+	    		 media_boos.start();
+ 
 	    	}
 	    }
 	    
