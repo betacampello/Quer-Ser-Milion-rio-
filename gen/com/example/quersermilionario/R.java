@@ -1086,6 +1086,7 @@ containing a value of this type.
         public static final int Ok2=0x7f06004d;
         public static final int Pause=0x7f060045;
         public static final int Spintypes=0x7f06004a;
+        public static final int Win=0x7f06004e;
         public static final int action_bar=0x7f06001c;
         public static final int action_bar_activity_content=0x7f060015;
         public static final int action_bar_container=0x7f06001b;
@@ -1097,7 +1098,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
-        public static final int action_settings=0x7f06004e;
+        public static final int action_settings=0x7f06004f;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
         public static final int beginning=0x7f060011;

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class Win extends ActionBarActivity {
 
@@ -12,6 +13,16 @@ public class Win extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_win);
+		
+		
+		VarGlobal app = ((VarGlobal) this.getApplication());
+		String name = app.player.getName();
+		TextView printNameScore=(TextView)findViewById(R.id.Win);
+		printNameScore.setText( "Parabéns "+ name + " Você ganhou 1.000.000 de reais!");
+		
+		
+		
+		
 	}
 
 	@Override
