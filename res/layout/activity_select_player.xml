@@ -12,17 +12,17 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/Spintypes"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
         android:onClick="onClick"
-        android:text="Ok" />
+        android:text="Criar Jogador" />
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -31,7 +31,7 @@
 
     <Spinner
         android:id="@+id/Spintypes"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
         android:layout_centerHorizontal="true"
@@ -39,19 +39,19 @@
 
     <Spinner
         android:id="@+id/spinnerPlayers"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button1"
         android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/Ok2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/spinnerPlayers"
         android:layout_marginTop="44dp"
         android:onClick="onClickPlayerSelect"
-        android:text="Ok" />
+        android:text="Selecionar jogador" />
 
 </RelativeLayout>
