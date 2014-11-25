@@ -1,5 +1,5 @@
 ﻿Qual é a principal caracteristica da linguagem java?;Linguagem de nova geraçao;Linguagem fortemente tipada;Linguagem muito dificil;Estão corretas A e C;Linguagem fortemente tipada
-Qual é o tamanho do tipo primitivo "INT"?;1 byte;2 bytes;4 bytes;8 bytes;1 byte
+Qual é o tamanho do tipo primitivo "INT"?;1 byte;2 bytes;4 bytes;8 bytes;4 bytes
 Para que se usa "+" entre duas Strings?;Somar;Substrair;Concatenar;Nenhuma é correta;Concatenar
 Qual é o rango do tipo primitivo "Boolean"?;True / False;Entre -2^1 e 2^1;Entre -2^10 e 2^10;nenhuma das anteriores;True / False
 Qual de os seguintes tipos não é primitivo?;Int;Long;Short;String;String
