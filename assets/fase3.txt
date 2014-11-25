@@ -4,7 +4,7 @@ Quando se usa "Void"?;O método não tem return;Definir classes;Criar um objeto;
 Que é um método?;Operação que realiza ações;Quando a função pertence a uma classe se chama método;É um objeto que pertence a uma classe;A 1 e 2 estão corretas;A 1 e 2 estão corretas
 O que é "Switch"?;Comando de repetição;Comando de seleção;Comando de multiplicação;Comando de importação;Comando de seleção
 Qual das seguintes palavras não faz parte da gestão de exceção?;try;finally;thrown;catch;thrown
-O comando "For" usa...?;Inicializador;Expressão;Incremento;Todas;Inicializador
+O comando "For" usa...?;Inicializador;Expressão;Incremento;Todas;Todas
 Em Java, pelo que pode ser substituida as reticencias segunintes: "private double ..."?;Atributo;Método;Objeto;variável;Atributo
 Como acessar o último elemento de um array?;ArrayName.length;ArrayName[]length-1;ArrayName.length+1;ArrayName.length-1;ArrayName.length-1
 Como sabemos o tamanho de uma String?;Length(nome da String);tamanho(nome da String);Length.tamanho(nome da String);nome da String.length();nome da String.length()
