@@ -18,7 +18,7 @@ public class Win extends ActionBarActivity {
 		VarGlobal app = ((VarGlobal) this.getApplication());
 		String name = app.player.getName();
 		TextView printNameScore=(TextView)findViewById(R.id.Win);
-		printNameScore.setText( "Parabéns "+ name + " Você ganhou 1.000.000 de reais!");
+		printNameScore.setText( "Parabéns "+ name + ", Você ganhou 1.000.000 de reais!");
 		
 		
 		

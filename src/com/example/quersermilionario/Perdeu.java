@@ -20,7 +20,7 @@ public class Perdeu extends ActionBarActivity {
 		String name = app.player.getName();
 		int last_score = app.player.getLast_score();
 		TextView printNameScore=(TextView)findViewById(R.id.NameScore);
-		printNameScore.setText(name + ",\nsua pontuação foi: " + String.valueOf(last_score));
+		printNameScore.setText("Sinto muito " + name + ", você errou"+ ",\nsua pontuação foi: " + String.valueOf(last_score));
 		
 	}
 	

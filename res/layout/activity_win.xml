@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.quersermilionario.Win" >
+    tools:context="com.example.quersermilionario.Win"
+    android:background="@drawable/backgroundmain" >
 
     <TextView
         android:id="@+id/Win"
@@ -14,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="149dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="200dp"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
