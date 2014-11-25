@@ -1,0 +1,11 @@
+﻿Em java NÃO é possivel:;Que uma classe herde de outra classe abstrata;Que uma Classe herde de duas outras classes diferentes;Modificar um Método da classe herdada;Tudo é possível;Que uma Classe herde de duas outras classes diferentes
+Qual das seguintes classes é uma superclass de qualquer classe em java?;String class;Object class;Abstract class;ArrayList class;Object class
+Qual operador é usado por Java para liberar memoria de um objeto quando ele não está sendo usado por um longo tempo?;delete;free;new;nenhuma das anteriores;nenhuma das anteriores
+Qual das seguintes palavras pode ser usada para evitar o "Method overriding"?;static;constant;protected;final;final
+Qual dos seguintes é a forma correta de chamar um contrutor que não tem paramêtros, da superclass A para a subclasse B?;super(void);superclass.();super.A();super();super()
+Em Java é possível:;Que um método chame a ele mesmo em uma classe, criar um atributo com tipo da própria classe;Que duas classes herdem de uma classe;todas são corretas;todas são corretas
+Em Java é correto afirmar:;Strings são mutáveis;Deve haver apenas um construtor em cada classe;DateFormat é uma classe abstrata que pode formatar datas;nenhuma das anteriores;DateFormat é uma classe abstrata que pode formatar datas
+Qual é o tipo de retorno de um contrutor?;int;float;void;Nenhuma das anteriores;Nenhuma das anteriores
+Qual das seguintes classes contém o método usado para "escrever" em um fle?;FileStream;FileInputStream;BUfferedOutputStream;FileBufferStream;FileInputStream
+Qual desses valores é retornado pelo método read() se se chega ao final do arquivo (EOF)?;0;1;-1;null;-1
+

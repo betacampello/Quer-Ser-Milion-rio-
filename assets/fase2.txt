@@ -1,0 +1,10 @@
+﻿Qual das seguintes palavras é usada pelo método para se referir ao objeto ao qual pertence?;self;catch;abstract;this;this
+O erro: "ArrayIndexOutOfBoundsException...?" indica:;O limite do tamanho do Array foi excedido;O Array não pode ser acessado;O array tem uma exceção;O array não existe;O limite do tamanho do Array foi excedido
+Que indica o comando "Break"?;Volta ao inicio;Não existe;Final do codigo;Interrupção imediata;Interrupção imediata
+Em java, arrays multidimensionais são considerados...?;Vetores;Arrays de arrays;Em Java eles não existem;Nenhum deles;Arrays de arrays
+Em que ano foi criado o programa Eclipse?;2002;2001;1998;1997;2001
+Para que serve o comando "math.pow"?;Duplicar;Não existe;Exponencial;Raiz Quadrada;Exponencial
+Onde se usa o comando "if-Else"?;Estrutura de repetição;Controle de seleção;Nenhuma delas;Definição de classe;Estrutura de repetição
+Em java o que é um objeto?;Agrupação de dados;Um conceito;Agrupação de operações;Todas elas;Todas elas
+Uma classe pode conter...?;Atributos;Metodos;Construtores;Todas são verdadeiras;Todas são verdadeiras
+Caracteristicas de uma classe?;Agrupação de objetos;Realizan operações;Conceito;Todas elas;Todas elas

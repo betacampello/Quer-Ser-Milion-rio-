@@ -14,7 +14,7 @@ public class Fase_4 extends Fases {
 		quantidade_perguntas_fase = 5;
 		valor_primeira_pergunta = 100000;
 		score_pergunta = 100000;
-		arquivo = "test2.txt";
+		arquivo = "fase4.txt";
 		super.seguinte_fase = Fase_5.class;
 		
 		super.onCreate(savedInstanceState);

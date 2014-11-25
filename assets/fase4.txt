@@ -1,0 +1,10 @@
+﻿Quando se usa a palavra "private" para um atributo?;Quando queremos que seja acessados só pela classe;Quando são ocultos dentro da classe;Não existe;a 1 e a 2 são corretas;Quando queremos que seja acessados só pela classe
+É obrigatorio o uso de private em java?;Sim;Não, porém é recomendado;É obrigatório só para os métodos;nenhuma é correta;Não, porém é recomendado
+Como acessar um atributo criado como private em outra classe?;Não é possível;Com métodos públicos;Apenas com Método get e set;Da mesma forma que o public;Com métodos públicos
+Public void creditar(double valor) é...?;Um objeto;Uma classe;Um método;Uma função;Um método
+Quais dessas palavras-chave são usadas para gerar uma exceção manualmente?;try;catch;throw;check;throw
+Os objetos são manipulados através de...?;Referências;Outros objetos;Números;Classes;Referências
+Em java, os métodos podem ser...?;Positivos;Recursivos;Negativos;Indutivos;Recursivos;
+Qué é um array?;Uma classe;Pode ser uma matriz;Pode ser um vetor;A 2 e a 3 estão corretas;A 2 e a 3 estão corretas
+Qual das seguintes palavras é usada para referir-se a um membro da classe base desde uma subclasse?;upper;super;this;nenhuma das anteriores;super
+O primeiro elemento de um array é?;0;1;2;null;0
